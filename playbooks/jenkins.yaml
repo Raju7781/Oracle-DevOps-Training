@@ -21,7 +21,7 @@
         name: http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
         state: present
         disable_gpg_check: true
-        ignore_errors: yes    
+      ignore_errors: yes    
     - name: Install Jenkins
       yum:
         name: jenkins
