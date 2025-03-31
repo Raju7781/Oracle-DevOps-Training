@@ -1,0 +1,17 @@
+--- 
+- hosts: webservers 
+  user: ansible 
+  become: yes
+  connection: ssh 
+  tasks:
+
+    - name: Install Git on webservers 
+      action: yum pkg=python3 state=present 
+    - name: install Java on webservers
+      action: yum pkg=java state=present
+    - name: Install mysql on webservers 
+      action: yum pkg="mysql" state=present 
+    - name: Install docker on webservers 
+      action: yum pkg=docker state=present 
+    - name: Install httpd on webservers
+      action: yum pkg=httpd state=webservers          
